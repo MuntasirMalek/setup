@@ -1,0 +1,8 @@
+{
+    "security.workspace.trust.banner": "never",
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Default Light+",
+    "terminal.integrated.cwd": "${fileDirname}"
+}
