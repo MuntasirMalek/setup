@@ -1,0 +1,11 @@
+{
+    "workbench.startupEditor": "none",
+    "update.mode": "none",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Default Light+",
+    "terminal.integrated.cwd": "${fileDirname}",
+}
