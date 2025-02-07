@@ -133,7 +133,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'Cursor.app'"
+                                        "shell_command": "open -a 'Visual Studio Code.app'"
                                     }
                                 ],
                                 "type": "basic"
@@ -261,7 +261,31 @@
                         ]
                     },
                     {
-                        "description": "Hyper+c to Open CopyQ",
+                        "description": "Hyper+p to Open CopyQ",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'CopyQ.app'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper+c to Open Cursor",
                         "manipulators": [
                             {
                                 "from": {
@@ -277,7 +301,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'CopyQ.app'"
+                                        "shell_command": "open -a 'Cursor.app'"
                                     }
                                 ],
                                 "type": "basic"
