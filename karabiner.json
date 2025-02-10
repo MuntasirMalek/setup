@@ -695,7 +695,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "for i in $(seq 4); do osascript -e 'tell application \"System Events\"' -e 'key code 145' -e ' end tell'; done"
+                                        "shell_command": "for i in $(seq 12); do osascript -e 'tell application \"System Events\"' -e 'key code 145' -e ' end tell'; done"
                                     }
                                 ],
                                 "type": "basic"
