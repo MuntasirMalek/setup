@@ -357,7 +357,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper+w to Open KeepingYouAwake",
+                        "description": "Hyper+l to Open/Close KeepingYouAwake",
                         "manipulators": [
                             {
                                 "from": {
@@ -373,7 +373,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'KeepingYouAwake.app'"
+                                        "shell_command": "if ps aux | grep -v grep | grep 'KeepingYouAwake.app' > /dev/null; then osascript -e 'quit app \"KeepingYouAwake.app\"'; else open -a 'KeepingYouAwake.app'; fi"
                                     }
                                 ],
                                 "type": "basic"
