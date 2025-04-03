@@ -357,30 +357,6 @@
                         ]
                     },
                     {
-                        "description": "Hyper+l to Open/Close KeepingYouAwake",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "if ps aux | grep -v grep | grep 'KeepingYouAwake.app' > /dev/null; then osascript -e 'quit app \"KeepingYouAwake.app\"'; else open -a 'KeepingYouAwake.app'; fi"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Hyper+l to Open/Close AlDente",
                         "manipulators": [
                             {
@@ -405,11 +381,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper+a to Open/Close KeepingYouAwake",
+                        "description": "Hyper+w to Open/Close KeepingYouAwake",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
