@@ -333,11 +333,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper+y to Open ProtonVPN",
+                        "description": "Hyper+r to Open/Close Kap",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -349,31 +349,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'ProtonVPN.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper+u to Open VLC",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'VLC.app'"
+                                        "shell_command": "if ps aux | grep -v grep | grep 'Kap.app' > /dev/null; then osascript -e 'quit app \"Kap.app\"'; else open -a 'Kap.app'; fi"
                                     }
                                 ],
                                 "type": "basic"
@@ -884,7 +860,7 @@
                         ]
                     },
                     {
-                        "description": "Map Left Shift to Delete Current File in IINA",
+                        "description": "Map Right Shift to Delete Current File in IINA",
                         "manipulators": [
                             {
                                 "type": "basic",
