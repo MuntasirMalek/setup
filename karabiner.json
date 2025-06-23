@@ -520,28 +520,6 @@
                         ]
                     },
                     {
-                        "description": "Fn to close the window if pressed alone",
-                        "manipulators": [
-                          {
-                            "from": {
-                                "key_code": "fn"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "fn"
-                                }
-                            ],
-                            "to_if_alone": [
-                                {
-                                  "key_code": "w",
-                                  "modifiers": ["command"]
-                                }
-                            ],
-                            "type": "basic"
-                          }
-                        ]
-                    },
-                    {
                         "description": "Period+Right Option to Next Tab",
                         "manipulators": [
                             {
