@@ -814,11 +814,12 @@
                         ]
                     },
                     {
-                        "description": "Toggle Bluetooth with Hyper+a",
+                        "description": "Hyper+e to Toggle Bluetooth Speaker",
                         "manipulators": [
                             {
+                                "type": "basic",
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -830,10 +831,9 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "if [ $(/usr/local/bin/blueutil -p) -eq 1 ]; then /usr/local/bin/blueutil --disconnect c2-b4-28-07-08-d3 && /usr/local/bin/blueutil -p 0; else /usr/local/bin/blueutil -p 1 && sleep 1 && /usr/local/bin/blueutil --connect c2-b4-28-07-08-d3; fi"
+                                        "shell_command": "DEVICE=\"b3-95-eb-3d-bc-72\"; BIN=\"/usr/local/bin/blueutil\"; if [ \"$($BIN --is-connected $DEVICE)\" = \"1\" ]; then $BIN --disconnect $DEVICE; else $BIN --connect $DEVICE; fi"
                                     }
-                                ],
-                                "type": "basic"
+                                ]
                             }
                         ]
                     },
@@ -1554,4 +1554,4 @@
             }
         }
     ]
-}
+                                    }
