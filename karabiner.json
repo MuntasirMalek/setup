@@ -787,6 +787,35 @@
                         ]
                     },
                     {
+                        "description": "Hyper+s to Screenshot to Clipboard",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map Command+R to Rename in Preview",
                         "manipulators": [
                           {
@@ -1554,4 +1583,4 @@
             }
         }
     ]
-                                    }
+                        }
