@@ -703,33 +703,6 @@
                         ]
                     },
                     {
-                        "description": "Map Command+M to Move Tab to New Window in Chrome",
-                        "manipulators": [
-                          {
-                            "type": "basic",
-                            "from": {
-                              "key_code": "m",
-                              "modifiers": {
-                                "mandatory": ["command"]
-                              }
-                            },
-                            "to": [
-                              {
-                                "shell_command": "osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"System Events\" to click menu item \"Move Tab to New Window\" of menu \"Tab\" of menu bar 1 of process \"Google Chrome\"'"
-                              }
-                            ],
-                            "conditions": [
-                              {
-                                "type": "frontmost_application_if",
-                                "bundle_identifiers": [
-                                  "^com\\.google\\.Chrome$"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                    },
-                    {
                         "description": "Map Control+W to Close Tabs to the Right in Chrome",
                         "manipulators": [
                           {
@@ -1607,4 +1580,4 @@
             }
         }
     ]
-                    }
+                }
