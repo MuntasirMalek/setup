@@ -24,10 +24,6 @@
         "command": "editor.action.toggleMinimap"
     },
     {
-        "key": "cmd+m",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    {
         "key": "ctrl+tab",
         "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
         "when": "!activeEditorGroupEmpty"
@@ -106,5 +102,95 @@
     {
         "key": "alt+w",
         "command": "workbench.action.terminal.killViewOrEditor"
-    }
+    },
+    {
+      "key": "alt+g",
+      "command": "banglaInput.toggle",
+      "when": "editorTextFocus"
+    },
+{
+    "key": "cmd+m",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "==${TM_SELECTED_TEXT}==" },
+    "when": "editorTextFocus && editorLangId == markdown"
+},
+{
+    "key": "cmd+l",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "<span style=\"background-color: lightpink\">${TM_SELECTED_TEXT}</span>" },
+    "when": "editorTextFocus && editorLangId == markdown"
+},
+{
+    "key": "cmd+k",
+    "command": "multiCommand.openSmallPreview",
+    "when": "editorLangId == markdown && activeEditorGroupLast"
+},
+{
+    "key": "cmd+k",
+    "command": "workbench.action.closeEditorsInOtherGroups",
+    "when": "editorLangId == markdown && !activeEditorGroupLast"
+},
+{
+    "key": "cmd+shift+m",
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "editor.action.clipboardCutAction",
+            "deleteLeft",
+            "deleteLeft",
+            "deleteRight",
+            "deleteRight",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+},
+{
+    "key": "cmd+shift+l",
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "editor.action.clipboardCutAction",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
+            "deleteLeft", "deleteLeft",
+            "deleteRight", "deleteRight", "deleteRight", "deleteRight",
+            "deleteRight", "deleteRight", "deleteRight",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+},
+{
+    "key": "cmd+h",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "**${TM_SELECTED_TEXT}**" },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+},
+{
+    "key": "cmd+shift+h",
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "editor.action.clipboardCutAction",
+            "deleteLeft",
+            "deleteLeft",
+            "deleteRight",
+            "deleteRight",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+},
+{
+    "key": "cmd+h",
+    "command": "-workbench.action.hideWindow"
+}
 ]
+
