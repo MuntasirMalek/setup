@@ -4,8 +4,37 @@
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "files.autoSave": "afterDelay",
-    "editor.wordWrap": "on",
     "editor.accessibilitySupport": "off",
     "workbench.colorTheme": "Default Light+",
     "terminal.integrated.cwd": "${fileDirname}",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.plist": "default"
+    },
+    "markdown-preview-enhanced.printBackground": true,
+    "editor.pasteAs.preferences": [
+        "markdown.link.image"
+    ],
+    "markdown.copyFiles.destination": {
+        "**/*": "assets/"
+    },
+    "workbench.editor.splitSizing": "split",
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.openSmallPreview",
+            "sequence": [
+                "markdown-preview-enhanced.openPreviewToTheSide",
+                "workbench.action.focusFirstEditorGroup", 
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize"
+            ]
+        }
+    ],
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "workbench.activityBar.location": "hidden",
 }
+
