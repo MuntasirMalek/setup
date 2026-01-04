@@ -104,15 +104,9 @@
         "command": "workbench.action.terminal.killViewOrEditor"
     },
     {
-    "key": "cmd+m",
+    "key": "cmd+h",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "==${TM_SELECTED_TEXT}==" },
-    "when": "editorTextFocus && editorLangId == markdown"
-    },
-    {
-    "key": "cmd+l",
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "<span style=\"background-color: lightpink\">${TM_SELECTED_TEXT}</span>" },
     "when": "editorTextFocus && editorLangId == markdown"
     },
     {
@@ -124,49 +118,6 @@
     "key": "cmd+k",
     "command": "workbench.action.closeEditorsInOtherGroups",
     "when": "editorLangId == markdown && !activeEditorGroupLast"
-    },
-    {
-    "key": "cmd+shift+m",
-    "command": "runCommands",
-    "args": {
-        "commands": [
-            "editor.action.clipboardCutAction",
-            "deleteLeft",
-            "deleteLeft",
-            "deleteRight",
-            "deleteRight",
-            "editor.action.clipboardPasteAction"
-        ]
-    },
-    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
-    },
-    {
-    "key": "cmd+shift+l",
-    "command": "runCommands",
-    "args": {
-        "commands": [
-            "editor.action.clipboardCutAction",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft", "deleteLeft",
-            "deleteLeft", "deleteLeft",
-            "deleteRight", "deleteRight", "deleteRight", "deleteRight",
-            "deleteRight", "deleteRight", "deleteRight",
-            "editor.action.clipboardPasteAction"
-        ]
-    },
-    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
-    },
-    {
-    "key": "cmd+h",
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "**${TM_SELECTED_TEXT}**" },
-    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
     },
     {
     "key": "cmd+shift+h",
@@ -184,8 +135,42 @@
     "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
     },
     {
+    "key": "cmd+l",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "**${TM_SELECTED_TEXT}**" },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+    },
+    {
+    "key": "cmd+shift+l",
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "editor.action.clipboardCutAction",
+            "deleteLeft",
+            "deleteLeft",
+            "deleteRight",
+            "deleteRight",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+    },
+    {
     "key": "cmd+h",
     "command": "-workbench.action.hideWindow"
+    },
+    {
+    "key": "cmd+m",
+    "command": "editor.action.insertSnippet",
+    "args": {
+        "snippet": " <span style=\"background:red;padding:1px 15px;border-radius:5px;font-weight:bold;font-size:1.1em;border:1px solid #ff0000ff;text-shadow:1px 1px 1px black;\">📌</span>"
+    },
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+    "key": "alt+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
     }
 ]
 
