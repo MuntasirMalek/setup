@@ -171,6 +171,10 @@
     "key": "alt+d",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+    "key": "cmd+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
     }
 ]
-
