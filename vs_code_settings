@@ -36,4 +36,8 @@
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
     "workbench.activityBar.location": "hidden",
+    "python.defaultInterpreterPath": "/Users/utsho/bin/python",
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/utsho/bin:${env:PATH}"
+    }
 }
