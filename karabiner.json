@@ -1033,6 +1033,33 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                       "description": "Cmd+S -> Run toggle_sticky.sh (Finder Only)",
+                       "manipulators": [
+                         {
+                           "type": "basic",
+                           "from": {
+                             "key_code": "s",
+                             "modifiers": { "mandatory": ["left_command"] }
+                           },
+                           "to": [ { "shell_command": "~/toggle_sticky.sh" } ],
+                           "conditions": [
+                             { "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.apple\\.finder$"] }
+                           ]
+                         },
+                         {
+                           "type": "basic", 
+                           "from": {
+                             "key_code": "s",
+                             "modifiers": { "mandatory": ["left_option"] }
+                           },
+                           "to": [ { "shell_command": "~/toggle_sticky.sh" } ],
+                           "conditions": [
+                             { "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.apple\\.finder$"] }
+                           ]
+                         }
+                       ]
                     }
                 ]
             },
