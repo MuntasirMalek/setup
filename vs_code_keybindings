@@ -135,27 +135,6 @@
     "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
     },
     {
-    "key": "cmd+l",
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "**${TM_SELECTED_TEXT}**" },
-    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
-    },
-    {
-    "key": "cmd+shift+l",
-    "command": "runCommands",
-    "args": {
-        "commands": [
-            "editor.action.clipboardCutAction",
-            "deleteLeft",
-            "deleteLeft",
-            "deleteRight",
-            "deleteRight",
-            "editor.action.clipboardPasteAction"
-        ]
-    },
-    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
-    },
-    {
     "key": "cmd+h",
     "command": "-workbench.action.hideWindow"
     },
