@@ -1035,6 +1035,27 @@
                         ]
                     },
                     {
+                        "description": "Cmd+R → Set video icons in current Finder folder",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.finder$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/usr/local/bin/upreview-finder &" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                        "description": "Cmd+S -> Run toggle_sticky.sh (Finder Only)",
                        "manipulators": [
                          {
@@ -1632,3 +1653,4 @@
         }
     ]
 }
+
