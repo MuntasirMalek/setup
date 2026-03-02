@@ -781,33 +781,6 @@
                         ]
                     },
                     {
-                        "description": "Map Command+R to Rename in Finder",
-                        "manipulators": [
-                          {
-                            "type": "basic",
-                            "from": {
-                              "key_code": "r",
-                              "modifiers": {
-                                "mandatory": ["command"]
-                              }
-                            },
-                            "to": [
-                              {
-                                "shell_command": "osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to click menu item \"Rename\" of menu \"File\" of menu bar 1 of process \"Finder\"'"
-                              }
-                            ],
-                            "conditions": [
-                              {
-                                "type": "frontmost_application_if",
-                                "bundle_identifiers": [
-                                  "^com\\.apple\\.finder$"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                    },
-                    {
                         "description": "Hyper+s to Screenshot to Clipboard",
                         "manipulators": [
                             {
@@ -1050,7 +1023,7 @@
                                     "key_code": "r",
                                     "modifiers": { "mandatory": ["left_command"] }
                                 },
-                                "to": [{ "shell_command": "/usr/local/bin/upreview-finder &" }],
+                                "to": [{ "shell_command": "/usr/local/bin/vidicon-finder &" }],
                                 "type": "basic"
                             }
                         ]
