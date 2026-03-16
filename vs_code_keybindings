@@ -1,0 +1,159 @@
+[
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.toggleMinimap"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.killActiveTab",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "delete",
+        "command": "-workbench.action.terminal.killActiveTab",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "-workbench.action.terminal.killActiveTab",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.killAll"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.killViewOrEditor"
+    },
+    {
+    "key": "cmd+h",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "==${TM_SELECTED_TEXT}==" },
+    "when": "editorTextFocus && editorLangId == markdown"
+    },
+    {
+    "key": "cmd+k",
+    "command": "multiCommand.openSmallPreview",
+    "when": "editorLangId == markdown && activeEditorGroupLast"
+    },
+    {
+    "key": "cmd+k",
+    "command": "workbench.action.closeEditorsInOtherGroups",
+    "when": "editorLangId == markdown && !activeEditorGroupLast"
+    },
+    {
+    "key": "cmd+shift+h",
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "editor.action.clipboardCutAction",
+            "deleteLeft",
+            "deleteLeft",
+            "deleteRight",
+            "deleteRight",
+            "editor.action.clipboardPasteAction"
+        ]
+    },
+    "when": "editorTextFocus && editorLangId == markdown && editorHasSelection"
+    },
+    {
+    "key": "cmd+h",
+    "command": "-workbench.action.hideWindow"
+    },
+    {
+    "key": "cmd+m",
+    "command": "editor.action.insertSnippet",
+    "args": {
+        "snippet": " <span style=\"background:red;padding:1px 15px;border-radius:5px;font-weight:bold;font-size:1.1em;border:1px solid #ff0000ff;text-shadow:1px 1px 1px black;\">📌</span>"
+    },
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+    "key": "alt+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+    "key": "cmd+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
+    }
+]
