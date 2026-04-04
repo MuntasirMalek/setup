@@ -847,30 +847,6 @@
             ]
           },
           {
-            "description": "Hyper+e to Toggle Bluetooth Speaker",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "DEVICE=\"b3-95-eb-3d-bc-72\"; BIN=\"/usr/local/bin/blueutil\"; if [ \"$($BIN --is-connected $DEVICE)\" = \"1\" ]; then $BIN --disconnect $DEVICE; else $BIN --connect $DEVICE; fi"
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "Set Chrome Window to Top Left Corner with Hyper+1",
             "manipulators": [
               {
