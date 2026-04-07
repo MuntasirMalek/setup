@@ -301,7 +301,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "if pgrep -f 'auto-dim.sh' > /dev/null; then pgrep -f 'auto-dim.sh' | xargs -I{} /bin/kill -9 {}; osascript -e 'display notification \"Auto-Dim OFF\" with title \"Screen\"'; else /Users/utsho/auto-dim/auto-dim.sh & osascript -e 'display notification \"Auto-Dim ON\" with title \"Screen\"'; fi"
+                    "shell_command": "PID=$(pgrep -f '[a]uto-dim.sh'); if [ -n \"$PID\" ]; then echo $PID | xargs -I{} /bin/kill -9 {}; osascript -e 'display notification \"Auto-Dim OFF\" with title \"Screen\"'; else nohup /Users/utsho/auto-dim/auto-dim.sh > /dev/null 2>&1 & osascript -e 'display notification \"Auto-Dim ON\" with title \"Screen\"'; fi"
                   }
                 ],
                 "type": "basic"
