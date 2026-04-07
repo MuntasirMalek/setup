@@ -285,6 +285,30 @@
             ]
           },
           {
+            "description": "Hyper+e to Toggle Auto-Dim",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "if pgrep -f 'auto-dim.sh' > /dev/null; then pgrep -f 'auto-dim.sh' | xargs -I{} /bin/kill -9 {}; osascript -e 'display notification \"Auto-Dim OFF\" with title \"Screen\"'; else /Users/utsho/auto-dim/auto-dim.sh & osascript -e 'display notification \"Auto-Dim ON\" with title \"Screen\"'; fi"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Hyper+b to Open Brave Browser",
             "manipulators": [
               {
