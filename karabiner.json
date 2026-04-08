@@ -1049,7 +1049,7 @@
             ]
           },
           {
-            "description": "Cmd+S -> Run toggle_sticky.sh (Finder Only)",
+            "description": "Cmd+S -> Run lock_command_key.sh (Finder Only)",
             "manipulators": [
               {
                 "type": "basic",
@@ -1063,7 +1063,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "~/toggle_sticky.sh"
+                    "shell_command": "~/lock_command_key.sh"
                   }
                 ],
                 "conditions": [
@@ -1087,7 +1087,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "~/toggle_sticky.sh"
+                    "shell_command": "~/lock_command_key.sh"
                   }
                 ],
                 "conditions": [
