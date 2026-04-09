@@ -284,30 +284,7 @@
               }
             ]
           },
-          {
-            "description": "Hyper+e to Toggle Auto-Dim",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "/Users/utsho/auto-dim/toggle.sh"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
+
           {
             "description": "Hyper+b to Open Brave Browser",
             "manipulators": [
@@ -453,7 +430,7 @@
             ]
           },
           {
-            "description": "Hyper+w to Open/Close KeepingYouAwake",
+            "description": "Hyper+w to Toggle Auto-Dim + KeepingYouAwake",
             "manipulators": [
               {
                 "from": {
@@ -469,7 +446,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "if ps aux | grep -v grep | grep 'KeepingYouAwake.app' > /dev/null; then osascript -e 'quit app \"KeepingYouAwake.app\"'; else open -a 'KeepingYouAwake.app'; fi"
+                    "shell_command": "/Users/utsho/auto-dim/toggle-with-wake.sh"
                   }
                 ],
                 "type": "basic"
