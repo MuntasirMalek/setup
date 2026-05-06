@@ -189,7 +189,7 @@
             ]
           },
           {
-            "description": "Hyper+g to Open Google Chrome",
+            "description": "Hyper+g to Open Safari",
             "manipulators": [
               {
                 "from": {
@@ -205,7 +205,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'Google Chrome.app'"
+                    "shell_command": "open -a 'Safari.app'"
                   }
                 ],
                 "type": "basic"
