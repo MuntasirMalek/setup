@@ -117,6 +117,30 @@
             ]
           },
           {
+            "description": "Hyper+h to Open/Close Macs Fan Control",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "if pgrep -x 'Macs Fan Control' > /dev/null; then pkill -x 'Macs Fan Control'; else (open -a 'Macs Fan Control.app' && sleep 2 && osascript -e 'tell application \"System Events\" to tell process \"Macs Fan Control\" to click button \"Hide to menu bar\" of group 1 of window 1') & fi"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Hyper+c to Open Antigravity",
             "manipulators": [
               {
